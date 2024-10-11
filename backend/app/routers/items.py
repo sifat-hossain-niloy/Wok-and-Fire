@@ -1,11 +1,11 @@
+from typing import List
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app import models, schemas, crud
+from app import crud, schemas
 from app.database import get_db
 
 router = APIRouter()
 
-@router.get("/items/")
+@router.get("/items/", response_model=List[schemas.Item])
 def read_items(db: Session = Depends(get_db)):
-    items = crud.get_items(db)
-    return items
+    return crud.get_items(db)
