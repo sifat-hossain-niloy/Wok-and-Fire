@@ -40,6 +40,10 @@
 }
 
 .app__footer-links_icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
   margin-top: 0.5rem;
 }
 
@@ -102,3 +106,21 @@
     width: 80%;
   }
 }
+
+.location-item {
+  margin-bottom: 1rem;
+}
+
+.location-name {
+  margin-bottom: 0.5rem;
+}
+
+.location-hours {
+  line-height: 1.5;
+}
+
+.app__footer-headtext {
+  font-size: 48px;
+  line-height: 41.6px;
+}
+

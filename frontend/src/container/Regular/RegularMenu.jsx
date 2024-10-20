@@ -30,13 +30,13 @@ const menuItems = [
   { name: "Item 11", description: "Description of item 11" },
   { name: "Item 12", description: "Description of item 12" },
 ];
-
+const imageUrl = "https://i.ytimg.com/vi/3CVDrAkhDmI/maxresdefault.jpg"
 const RegularMenu = () => {
   return (
     <div className="menu-grid">
       {menuItems.map((item, index) => (
         <Card key={index} className="menu-card">
-        <CardMedia
+        <CardMedia 
             component="img"
             height="140"
             image={item.imageUrl}
