@@ -10,10 +10,29 @@ import { images } from "../../constants";
 import "./Gallery.css";
 
 const galleryImages = [
-  images.gallery01,
-  images.gallery02,
-  images.gallery03,
-  images.gallery04,
+  // images.gallery01,
+  // images.gallery02,
+  // images.gallery03,
+  // images.gallery04,
+  images.gal1,
+  images.gal2,
+  images.gal3,
+  images.gal4,
+  images.gal5,
+  images.gal6,
+  images.gal7,
+  images.gal8,
+  images.gal9,
+  images.gal10,
+  // images.gal11,
+  images.gal12,
+  images.gal13,
+  images.gal14,
+  images.gal15,
+  images.gal16,
+  images.gal17,
+  images.gal18,
+  images.gal19
 ];
 
 const Gallery = () => {

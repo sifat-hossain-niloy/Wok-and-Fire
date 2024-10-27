@@ -12,7 +12,7 @@ const FindUs = () => (
       </h1>
       <div className="app__wrapper-content">
         <p className="p__opensans">
-          Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG
+        Vauxhall Bridge Rd, Haymarket, Camden High St
         </p>
         <p
           className="p__cormorant"
@@ -20,8 +20,25 @@ const FindUs = () => (
         >
           Opening Hours
         </p>
-        <p className="p__opensans">Mon - Fri: 10:00 am - 02:00 am</p>
-        <p className="p__opensans">Sat - Sun: 10:00 am - 03:00 am</p>
+        {/* <p className="p__opensans">Mon - Fri: 10:00 am - 02:00 am</p>
+        <p className="p__opensans">Sat - Sun: 10:00 am - 03:00 am</p> */}
+        <ol className="p__opensans" style={{listStyleType: 'none', paddingLeft: '1rem'}}>
+          <li className="location-item">
+            <p className="location-name">Vauxhall Bridge Rd</p>
+            <ul className="location-hours">
+              <li>Monday-Friday: 11:00 AM - 01:00 AM</li>
+              <li>Sunday: 11:00 AM - 11:00 PM</li>
+            </ul>
+          </li>
+          <li className="location-item">
+            <p className="location-name">Haymarket</p>
+            <ul className="location-hours">
+              <li>Sunday-Thursday: 11:00 AM - 11:00 PM</li>
+              <li>Friday-Saturday: 11:00 AM - 02:00 AM</li>
+            </ul>
+          </li>
+          
+        </ol> 
       </div>
       <button
         type="button"
@@ -32,7 +49,7 @@ const FindUs = () => (
       </button>
     </div>
     <div className="app__wrapper_img">
-      <img src={images.findus} alt="findus" />
+      <img src={images.gal12} alt="findus" />
     </div>
   </div>
 );

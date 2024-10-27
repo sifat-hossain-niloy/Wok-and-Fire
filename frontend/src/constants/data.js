@@ -2,57 +2,57 @@ import images from './images';
 
 const wines = [
   {
-    title: 'Chapel Hill Shiraz',
-    price: '$56',
-    tags: 'AU | Bottle',
+    title: 'Fried Chicken Drumsticksa',
+    price: '£5.45',
+    tags: 'Chicken',
   },
   {
-    title: 'Catena Malbee',
-    price: '$59',
-    tags: 'AU | Bottle',
+    title: 'Fried Chicken Wings',
+    price: '£5.45',
+    tags: 'Chicken',
   },
   {
-    title: 'La Vieillw Rose',
-    price: '$44',
-    tags: 'FR | 750 ml',
+    title: 'Cheesy Chips',
+    price: '£3.95',
+    tags: 'Chips',
   },
   {
-    title: 'Rhino Pale Ale',
-    price: '$31',
-    tags: 'CA | 750 ml',
+    title: 'Original Corn Dog',
+    price: '£4.50',
+    tags: 'Corn dog',
   },
   {
-    title: 'Irish Guinness',
-    price: '$26',
-    tags: 'IE | 750 ml',
+    title: 'Potato & Mozarella Corn Dog',
+    price: '£4.95',
+    tags: 'Corn Dog',
   },
 ];
 
 const cocktails = [
   {
-    title: 'Aperol Sprtiz',
-    price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
+    title: 'Egg Noodles with Veg & Egg Mix',
+    price: '£5.45',
+    tags: 'Noodles',
   },
   {
-    title: "Dark 'N' Stormy",
-    price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
+    title: "Chicken Katsu",
+    price: '£2.95',
+    tags: 'Chicken',
   },
   {
-    title: 'Daiquiri',
-    price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    title: 'Prawn',
+    price: '£2.95',
+    tags: 'Seafood',
   },
   {
-    title: 'Old Fashioned',
-    price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
+    title: 'Mixed Seafood',
+    price: '£2.95',
+    tags: 'Seafood',
   },
   {
-    title: 'Negroni',
-    price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    title: 'Extra toppings',
+    price: 'from £0.60',
+    tags: 'Toppings',
   },
 ];
 
