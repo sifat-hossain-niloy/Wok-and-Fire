@@ -54,10 +54,15 @@ const Gallery = () => {
         <SubHeading title="Instagram" />
         <h1 className="headtext__cormorant">Photo Gallery</h1>
         <p className="p__opensans" style={{ color: "#AAA", marginTop: "2rem" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
-          mattis ipsum turpis elit elit scelerisque egestas mu.
+        Check out our Instagram for mouth-watering photos, behind-the-scenes action, 
+        and the latest menu updates. Dive into the vibe, discover our specials, 
+        and see why everyone’s raving. Follow us and get inspired for your next meal!
         </p>
-        <button type="button" className="custom__button">
+        <button 
+          type="button" 
+          className="custom__button"
+          onClick={() => window.open('https://www.instagram.com/wokandfireuk?igsh=OGdka2s3dWV0dTNm', '_blank')}
+        >
           View More
         </button>
       </div>

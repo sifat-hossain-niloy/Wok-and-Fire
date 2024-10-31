@@ -8,7 +8,7 @@ import {
   Gallery,
   Header,
   Intro,
-  Laurels,
+  //Laurels,
   SpecialMenu,
   RegularMenu,
 } from "./container";
@@ -24,7 +24,7 @@ const App = () => (
     <RegularMenu />
     <Chef />
     <Intro />
-    <Laurels />
+    {/* <Laurels /> */}
     <Gallery />
     <FindUs />
     <Footer />

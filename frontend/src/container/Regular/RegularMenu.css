@@ -1,8 +1,5 @@
-/* RegularMenu.css */
-
 .menu-container {
   background: url("../../assets/bg.png");
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 20px;
 }
@@ -15,15 +12,21 @@
   color: var(--color-golden);
 }
 
-.menu-section {
+.menu-row {
+  display: flex;
+  gap: 20px;
   margin-bottom: 40px;
 }
 
+.menu-section {
+  flex: 1;
+}
+
 .menu-section-title {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  margin-bottom: 10px;
   border-bottom: 2px solid var(--color-golden);
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-family: var(--font-base);
   color: var(--color-golden);
 }
@@ -31,14 +34,14 @@
 .menu-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .menu-card {
-  flex: 1 1 calc(33.333% - 40px);
+  flex: 1 1 calc(50% - 10px);
   background-color: var(--color-black);
   border: 1px solid var(--color-golden);
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
   border-radius: 8px;
@@ -50,15 +53,15 @@
 }
 
 .menu-card h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.2em;
+  margin-bottom: 5px;
   font-family: var(--font-base);
   color: var(--color-golden);
 }
 
 .menu-card p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 1em;
+  margin-bottom: 10px;
   font-family: var(--font-alt);
   color: var(--color-white);
 }
@@ -67,7 +70,7 @@
   background-color: var(--color-crimson);
   color: var(--color-black);
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
   font-family: var(--font-base);
@@ -75,52 +78,6 @@
 
 .menu-card button:hover {
   background-color: var(--color-golden);
-}
-
-.menu-subsection {
-  margin-top: 20px;
-}
-
-.menu-subsection label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1em;
-  font-family: var(--font-alt);
-  color: var(--color-white);
-}
-
-.menu-subsection select {
-  margin-left: 10px;
-  padding: 5px;
-  font-family: var(--font-alt);
-}
-
-.favourites-options label {
-  display: inline-block;
-  width: calc(50% - 20px);
-  margin-right: 20px;
-  color: var(--color-white);
-}
-
-.menu-build-your-own {
-  margin-top: 20px;
-}
-
-.add-meal-button {
-  background-color: var(--color-crimson);
-  color: var(--color-black);
-  border: none;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
-  font-family: var(--font-base);
-}
-
-.add-meal-button:disabled {
-  background-color: #a9a9a9;
-  cursor: not-allowed;
 }
 
 .add-to-cart-button {
@@ -133,7 +90,7 @@
   font-size: 1.5em;
   cursor: pointer;
   border-radius: 8px;
-  margin-top: 40px;
+  margin-top: 20px;
   font-family: var(--font-base);
 }
 
@@ -141,27 +98,15 @@
   background-color: var(--color-golden);
 }
 
-.menu-tagline {
-  text-align: center;
-  font-style: italic;
-  margin-top: 50px;
-  font-size: 1.2em;
-  font-family: var(--font-alt);
-  color: var(--color-white);
-}
-
 @media (max-width: 768px) {
-  .menu-card {
-    flex: 1 1 calc(50% - 40px);
+  .menu-row {
+    flex-direction: column;
   }
-  .favourites-options label {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 600px) {
   .menu-card {
     flex: 1 1 100%;
   }
+}
+
+.menu-section-2{
+  font-size: medium  ;
 }
