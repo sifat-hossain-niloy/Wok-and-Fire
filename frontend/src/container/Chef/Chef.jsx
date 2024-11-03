@@ -22,7 +22,7 @@ const Chef = () => (
           Our passion is to craft memorable flavors that bring people together.
           </p>
         </div>
-        <p className="p__opensans">
+        <p className="p__opensans" style={{ margin: "2rem 0", textTransform: "none" }}>
         Each dish combines tradition with innovation, using the freshest ingredients to create a truly unique dining experience. Welcome, and enjoy!
         </p>
       </div>

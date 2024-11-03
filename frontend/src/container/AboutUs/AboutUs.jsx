@@ -16,13 +16,13 @@ const AboutUs = () => (
       <div className="app__aboutus-content_about">
         <h1 className="headtext__cormorant">About Us</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
-        <p className="p__opensans">
+        <p className="p__opensans" style={{ margin: "2rem 0", textTransform: "none" }}>
         At Wok and Fire, we fuse tradition with innovation, crafting unforgettable Pan Asian fusion dishes that unite flavor and culture. 
         Every meal tells a story of fresh ingredients and timeless techniques.
         </p>
-        <button type="button" className="custom__button">
+        {/* <button type="button" className="custom__button">
           Know More
-        </button>
+        </button> */}
       </div>
 
       <div className="app__aboutus-content_knife flex__center">
@@ -32,13 +32,13 @@ const AboutUs = () => (
       <div className="app__aboutus-content_history">
         <h1 className="headtext__cormorant">Our History</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
-        <p className="p__opensans">
+        <p className="p__opensans" style={{ margin: "2rem 0", textTransform: "none" }}>
         From humble beginnings, we have grown by staying true to our passion for culinary excellence. Our journey is fueled by a 
         commitment to bringing people together through food that’s both flavorful and unforgettable.
         </p>
-        <button type="button" className="custom__button">
+        {/* <button type="button" className="custom__button">
           Know More
-        </button>
+        </button> */}
       </div>
     </div>
   </div>
