@@ -40,13 +40,13 @@ const FindUs = () => (
           
         </ol> 
       </div>
-      <button
+      {/* <button
         type="button"
         className="custom__button"
         style={{ marginTop: "2rem" }}
       >
         Visit Us
-      </button>
+      </button> */}
     </div>
     <div className="app__wrapper_img">
       <img src={images.gal12} alt="findus" />
