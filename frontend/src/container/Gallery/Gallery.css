@@ -1,7 +1,7 @@
 .app__gallery {
   display: flex;
   flex-direction: row;
-  background: var(--color-black);
+  background: var(--color-red);
   padding: 4rem 0 4rem 6rem;
 }
 
@@ -87,7 +87,7 @@
   color: var(--color-golden);
   font-size: 2rem;
   cursor: pointer;
-  background-color: var(--color-black);
+  background-color: var(--color-red);
   border-radius: 5px;
 }
 

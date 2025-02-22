@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
-
-import { meal } from "../../constants";
 import "./Intro.css";
 
+const videoSources = [
+  "/media/video4.mp4", // First video from public/media
+];
+
 const Intro = () => {
-  const [playVideo, setPlayVideo] = React.useState(false);
-  const vidRef = React.useRef();
+  const [playVideo, setPlayVideo] = useState(false);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const vidRef = useRef(null);
 
   const handleVideo = () => {
     setPlayVideo((prevPlayVideo) => !prevPlayVideo);
@@ -17,21 +20,26 @@ const Intro = () => {
     }
   };
 
+  // Function to switch to the next video when the current one ends
+  const handleVideoEnd = () => {
+    setCurrentVideoIndex((prevIndex) =>
+      prevIndex < videoSources.length - 1 ? prevIndex + 1 : 0 // Reset to first video after last one
+    );
+  };
+
   return (
-    <div className="app__video">
+    <div className="app__video_intro">
       <video
         ref={vidRef}
-        src={meal}
+        src={videoSources[currentVideoIndex]}
         type="video/mp4"
-        loop
         controls={false}
         muted
+        autoPlay
+        onEnded={handleVideoEnd} // Automatically move to the next video
       />
-      <div className="app__video-overlay flex__center">
-        <div
-          className="app__video-overlay_circle flex__center"
-          onClick={handleVideo}
-        >
+      <div className="app__video_intro-overlay flex__center">
+        <div className="app__video_intro-overlay_circle flex__center" onClick={handleVideo}>
           {playVideo ? (
             <BsPauseFill color="#fff" fontSize={30} />
           ) : (

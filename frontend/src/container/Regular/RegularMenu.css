@@ -61,9 +61,9 @@
 /* Menu Card */
 .menu-card {
   flex: 1 1 calc(50% - 10px);
-  background-color: var(--color-black);
+  background-color: var(--color-red);
   border: 1px solid var(--color-golden);
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
   border-radius: 8px;
@@ -93,7 +93,7 @@
 /* Card button styling */
 .menu-card button {
   background-color: var(--color-crimson);
-  color: var(--color-black);
+  color: var(--color-red);
   border: none;
   padding: 10px 15px;
   cursor: pointer;
@@ -112,8 +112,8 @@
 .add-to-cart-button {
   display: block;
   width: 100%;
-  background-color: var(--color-crimson);
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-golden);
   border: none;
   padding: 15px 0;
   font-size: 2em;
@@ -125,7 +125,7 @@
 }
 
 .add-to-cart-button:hover {
-  background-color: var(--color-golden);
+  background-color: var(--color-red);
   transform: scale(1.03);
 }
 
@@ -141,7 +141,7 @@
 /* Build Your Own Meal Section */
 .menu-section-2 {
   font-size: medium;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(210,9,28,1.000);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -220,8 +220,8 @@
 
 /* Add Meal Button */
 .add-meal-button {
-  background-color: var(--color-golden);
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-golden);
   border: none;
   padding: 12px 20px;
   cursor: pointer;
@@ -233,18 +233,19 @@
 }
 
 .add-meal-button:disabled {
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.7);
   cursor: not-allowed;
 }
 
 .add-meal-button:hover:not(:disabled) {
-  background-color: var(--color-crimson);
+  background-color: var(--color-golden);
+  color: var(--color-red);
   transform: scale(1.05);
 }
 
 /* Selected Items Display */
 .selected-items {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(210,9,28,1.000);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -329,17 +330,25 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 500px;
+  width: 600px;
   max-height: 500px;
-  background: #1b1522;
+  
+  /* First background: Semi-transparent overlay */
+  background: linear-gradient(rgba(210,9,28,0.4), rgba(0, 0, 0, 0.4)), 
+              url("../../assets/CHATBOX-01.png") no-repeat center center;
+              
+  background-size: contain; /* First applies to overlay, second to image */
+
   border: 1px solid #ddd;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   z-index: 9999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(168, 27, 27, 0.1);
   animation: slideIn 0.5s ease-out;
 }
+
+
 
 /* Chatbot Messages Container */
 .chatbot-messages {
@@ -348,14 +357,19 @@
   flex: 1;
 }
 
-/* Individual Chatbot Message */
-.chatbot-message {
-  background: #946d54;
+.chatbot-messages {
   padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  overflow-y: auto;
+  flex: 1;
+
+  /* Hide scrollbar for Chrome, Safari, and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
 
+.chatbot-messages::-webkit-scrollbar {
+  display: none;
+}
 .chatbot-message p {
   margin: 0 0 10px;
 }
@@ -370,15 +384,15 @@
 .chatbot-buttons button {
   padding: 5px 10px;
   font-size: 1.4em;
-  background: #ff7f50;
-  color: #000000;
+  background: rgba(219, 209, 209, 0.8);
+  color: #100101;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
 }
 .chatbot-buttons button:hover {
-  background: #e0683b;
+  background: #cb3232;
   transform: scale(1.04);
 }
 
@@ -404,6 +418,16 @@
   transform: scale(1.04);
 }
 
+.chatbot-reset {
+  background: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
 /* Minimizer bar when the chatbot is minimized */
 .chatbot-minimized-bar {
   position: fixed;
@@ -417,12 +441,12 @@
   text-align: center;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(210,9,28,0.4);
   animation: slideIn 0.5s ease-out;
 }
 
 .chatbot-minimized-bar:hover {
-  background-color: #2a1e30;
+  background-color: rgba(210,9,28,0.5);
   transform: scale(1.02);
 }
 

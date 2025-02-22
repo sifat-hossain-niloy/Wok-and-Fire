@@ -1,6 +1,6 @@
 .app__specialMenu {
   flex-direction: column;
-  background: var(--color-black);
+  background: var(--color-red);
 }
 
 .app__specialMenu-title {
@@ -34,14 +34,16 @@
 }
 
 .app__specialMenu-menu_img {
-  width: 410px;
+  width: 20px;
   margin: 0 2rem;
 }
 
 .app__specialMenu-menu_img img {
   width: 100%;
-  height: auto;
+  height: 100vh; 
+  object-fit:cover; 
 }
+
 
 .app__specialMenu_menu_items {
   display: flex;
@@ -54,9 +56,9 @@
   .app__specialMenu-menu_img {
     width: 650px;
   }
-  .app__specialMenu-menu_img img {
-    height: 920px;
-  }
+  /* .app__specialMenu-menu_img img {
+    height: 820px;
+  } */
 }
 
 @media screen and (max-width: 1150px) {

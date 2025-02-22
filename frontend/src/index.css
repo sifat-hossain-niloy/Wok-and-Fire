@@ -7,12 +7,13 @@
   --font-base: "Cormorant Upright", serif;
   --font-alt: "Open Sans", sans-serif;
 
-  --color-golden: #dcca87;
+  --color-golden: #e1ad21  ;
   --color-black: #0c0c0c;
   --color-gray: #545454;
   --color-crimson: #f5efdb;
   --color-grey: #aaaaaa;
   --color-white: #ffffff;
+  --color-red: #D2091C;
 }
 
 * {

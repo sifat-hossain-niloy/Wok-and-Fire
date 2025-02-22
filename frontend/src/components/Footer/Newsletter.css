@@ -1,101 +1,36 @@
-/* .app__newsletter {
-  padding: 2rem 4rem;
-  border: 1px solid var(--color-golden);
-  background: var(--color-black);
-}
-
-.app__newsletter-heading {
-  text-align: center;
-}
-
-.app__newsletter-input {
-  flex-direction: row;
-  margin-top: 3rem;
-}
-
-.app__newsletter-input input {
-  width: 620px;
-  border: 1px solid var(--color-golden);
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: var(--font-base);
-  color: var(--color-white);
-
-  margin-right: 2rem;
-  padding: 0.75rem 1rem;
-  background: var(--color-black);
-}
-
-.app__newsletter-input button {
-  width: max-content;
-}
-
-@media screen and (min-width: 2000px) {
-  .app__newsletter-input input {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .app__newsletter-input {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .app__newsletter-input input {
-    margin: 0 0 2rem 0;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .app__newsletter {
-    padding: 2rem 0;
-    border: none;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .app__newsletter-heading h1 {
-    font-size: 32px;
-    line-height: 50px;
-  }
-} */
-
 .app__newsletter {
   padding: 2rem 4rem;
   border: 1px solid var(--color-golden);
-  background: var(--color-black);
+  background: var(--color-red);
 }
 
 .app__newsletter-heading {
   text-align: center;
 }
 
-.app__newsletter-heading p{
+.app__newsletter-heading p {
   margin-bottom: 1rem;
 }
 
 .app__newsletter-input {
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap for smaller cards */
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .app__social-card {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
   color: var(--color-white);
-  background: var(--color-black);
+  background: var(--color-red);
   border: 1px solid var(--color-golden);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
-  width: 450px;
-  height: 150px;
+  width: 300px; /* Reduced width */
+  height: 100px; /* Reduced height */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -104,9 +39,15 @@
   box-shadow: 0 4px 12px rgba(220, 202, 135, 0.3);
 }
 
+.social-logo {
+  width: 40px;  /* Set a fixed size for the logo */
+  height: 40px;
+  margin-right: 1rem;
+}
+
 .app__social-card-content h3 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem; /* Smaller font size to match the reduced card size */
+  margin-bottom: 0;
 }
 
 .app__social-card-content p {
