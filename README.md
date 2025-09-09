@@ -1,32 +1,18 @@
 [![Premium Photo | Chef Cooking Food Professional Chef Cooking with Wok ...](https://tse2.mm.bing.net/th?id=OIP.CWrhGwYBkSiQsEJB5cHtlAHaE7\&pid=Api)](https://www.freepik.com/premium-ai-image/chef-cooking-food-professional-chef-cooking-with-wok-fire-asian-kitchen_199404101.htm)
 
-Here's a comprehensive README for the [Wok-and-Fire](https://github.com/sifat-hossain-niloy/Wok-and-Fire) project:
 
 ---
+**Wok and Fire | Full-Stack Restaurant Web App**
 
-# 🔥 Wok and Fire
-
-**Wok and Fire** is a full-stack web application designed to streamline restaurant management. It offers an intuitive interface for managing menus, orders, and customer interactions.([Freepik][1])
-
----
-
-## 🚀 Features
-
-* **Menu Management**: Easily add, update, or remove menu items with real-time updates.
-* **Order Tracking**: Monitor incoming orders, update their status, and manage order history.
-* **Customer Interface**: Allow customers to browse the menu and place orders seamlessly.
-* **Responsive Design**: Optimized for both desktop and mobile devices.
-
----
+Wok and Fire is a full-stack restaurant management and ordering application built with **React, FastAPI, PostgreSQL, Firebase, and Stripe**. It enables restaurants to manage menus, process secure online payments, and provide an interactive experience with features like a chatbot and responsive UI/UX.
 
 ## 🛠️ Tech Stack
 
 * **Frontend**: React.js, Redux, CSS Modules
-* **Backend**: Node.js, Express.js, MongoDB
-* **Authentication**: JWT-based authentication system
-* **Deployment**: Dockerized for easy deployment
-
----
+* **Backend**: FastAPI
+* **Database**: PostgreSQL
+* **Authentication**: Firebase
+* **Payments**: Stripe
 
 ## 📂 Project Structure
 
@@ -36,7 +22,7 @@ Wok-and-Fire/
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
-│   └── server.js
+│   └── server.py
 ├── frontend/
 │   ├── components/
 │   ├── pages/
@@ -47,125 +33,86 @@ Wok-and-Fire/
 └── README.md
 ```
 
-
-
----
-
 ## ⚙️ Installation
 
 ### Prerequisites
 
+* Python (v3.9 or above)
 * Node.js (v14 or above)
-* MongoDB
-* Docker & Docker Compose (for containerized deployment)([GitHub][2])
+* PostgreSQL
+* Docker & Docker Compose (for containerized deployment)
 
 ### Steps
 
 1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/sifat-hossain-niloy/Wok-and-Fire.git
-   cd Wok-and-Fire
-   ```
-
-
+```bash
+git clone https://github.com/sifat-hossain-niloy/Wok-and-Fire.git
+cd Wok-and-Fire
+```
 
 2. **Set up environment variables**:
 
-   Create a `.env` file in the root directory and add the following:
+Create a `.env` file in the root directory:
 
-   ```env
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   ```
-
-
+```env
+DATABASE_URL=your_postgresql_connection_string
+FIREBASE_CONFIG=your_firebase_config
+STRIPE_SECRET_KEY=your_stripe_secret
+```
 
 3. **Install dependencies**:
 
-   ```bash
-   # For backend
-   cd backend
-   npm install
+```bash
+# Backend
+cd backend
+pip install -r requirements.txt
 
-   # For frontend
-   cd ../frontend
-   npm install
-   ```
-
-
+# Frontend
+cd ../frontend
+npm install
+```
 
 4. **Run the application**:
 
-   ```bash
-   # Start backend
-   cd ../backend
-   npm start
+```bash
+# Start backend
+cd ../backend
+uvicorn main:app --reload
 
-   # Start frontend
-   cd ../frontend
-   npm start
-   ```
+# Start frontend
+cd ../frontend
+npm start
+```
 
-
-
-The frontend will be available at `http://localhost:3000` and the backend API at `http://localhost:5000`.
-
----
+Frontend: `http://localhost:3000` | Backend API: `http://localhost:8000`
 
 ## 🐳 Docker Deployment
 
-To deploy the application using Docker:
+```bash
+docker-compose up --build
+```
 
-1. **Ensure Docker and Docker Compose are installed**.
-
-2. **Build and run the containers**:
-
-   ```bash
-   docker-compose up --build
-   ```
-
-
-
-The application will be accessible at `http://localhost`.
-
----
+App accessible at `http://localhost`
 
 ## 🧪 Testing
 
-To run tests for the backend:
-
 ```bash
+# Backend
 cd backend
-npm test
-```
+pytest
 
-
-
-For frontend tests:
-
-```bash
+# Frontend
 cd frontend
 npm test
 ```
 
-
-
----
-
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
+MIT License
 
 ## 🙌 Acknowledgements
 
 Developed by [Md Sifat Hossain](https://github.com/sifat-hossain-niloy) and [Intesar Tahmid](https://github.com/Intesar-Tahmid)
 
----
-
-Feel free to customize this README further to match any additional features or configurations specific to your project.
-
-[1]: https://www.freepik.com/premium-ai-image/chef-cooking-food-professional-chef-cooking-with-wok-fire-asian-kitchen_199404101.htm?utm_source=chatgpt.com "Premium Photo | Chef Cooking Food Professional Chef Cooking with Wok ..."
-[2]: https://github.com/kimchi-project/wok?utm_source=chatgpt.com "GitHub - kimchi-project/wok: A cherrypy framework for multi-purpose ..."
+🔗 [GitHub Repository](https://github.com/sifat-hossain-niloy/Wok-and-Fire)
